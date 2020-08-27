@@ -6,7 +6,14 @@ namespace racehandler
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DeadDropManager ddm = new DeadDropManager();
+
+            ddm.AddDeadDrop("racespy");
+
+            Console.WriteLine("Press 'q' to quit...");
+            while (Console.Read() != 'q') ;
+
+            ddm.BugOut();
         }
     }
 }
